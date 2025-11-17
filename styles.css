@@ -1,0 +1,286 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f7f7f8;
+  --ink: #0c0c0d;
+  --ink-muted: rgba(12, 12, 13, 0.6);
+  --panel: #ffffff;
+  --border: rgba(12, 12, 13, 0.08);
+  --accent: #0d0d0d;
+  --accent-faint: rgba(13, 13, 13, 0.05);
+  --radius-xl: 32px;
+  --radius-md: 16px;
+  --gap-xl: clamp(2.5rem, 5vw, 4rem);
+  --gap-lg: clamp(1.5rem, 4vw, 2.5rem);
+  --shadow: 0 40px 80px rgba(0, 0, 0, 0.06);
+
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  min-height: 100vh;
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+.canvas {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xl);
+}
+
+.panel {
+  background: var(--panel);
+  padding: clamp(1.5rem, 4vw, 2.75rem);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-lg);
+}
+
+.intro {
+  flex-direction: row;
+  align-items: stretch;
+  gap: var(--gap-lg);
+}
+
+.photo-frame {
+  flex: 1;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--accent-faint);
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-frame img {
+  width: 75%;
+  height: auto;
+  object-fit: contain;
+}
+
+.intro-copy {
+  flex: 1.3;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+p {
+  margin: 0;
+  color: var(--ink-muted);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+}
+
+.stat-value {
+  font-size: 1.75rem;
+  color: var(--ink);
+}
+
+.projects .panel-heading,
+.experience .panel-heading,
+.education .panel-heading,
+.contact .panel-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.project-carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(240px, 1fr);
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scroll-snap-type: x proximity;
+}
+
+.project-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.75rem;
+  scroll-snap-align: start;
+  background: var(--panel);
+  transition: transform 300ms ease, background 300ms ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  background: var(--accent-faint);
+}
+
+.project-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.timeline li {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+}
+
+.timeline-period {
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  margin-bottom: 0.25rem;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.education-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font: inherit;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--ink);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--ink);
+  opacity: 1;
+}
+
+.contact-form button {
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.9rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 200ms ease;
+}
+
+.contact-form button:hover {
+  opacity: 0.75;
+}
+
+.contact-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.contact-meta a {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid var(--ink);
+}
+
+@media (max-width: 900px) {
+  .intro {
+    flex-direction: column;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #000;
+    --panel: #0d0d0d;
+    --ink: #f6f6f6;
+    --ink-muted: rgba(246, 246, 246, 0.7);
+    --border: rgba(255, 255, 255, 0.08);
+    --accent: #f6f6f6;
+    --accent-faint: rgba(255, 255, 255, 0.05);
+    --shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    background: rgba(255, 255, 255, 0.02);
+    color: var(--ink);
+  }
+
+  .contact-form button {
+    color: #000;
+  }
+}
+

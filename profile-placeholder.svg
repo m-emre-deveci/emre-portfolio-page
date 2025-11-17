@@ -1,0 +1,17 @@
+<svg width="800" height="1000" viewBox="0 0 800 1000" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Replace with your portrait">
+  <defs>
+    <linearGradient id="fade" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#1f1f1f" />
+      <stop offset="100%" stop-color="#555" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#fade)" />
+  <g fill="none" stroke="#888" stroke-width="2">
+    <circle cx="400" cy="370" r="140" />
+    <path d="M160 780c40-140 160-210 240-210s200 70 240 210" />
+  </g>
+  <text x="50%" y="920" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="48" fill="#e5e5e5" text-anchor="middle">
+    Add Your Photo
+  </text>
+</svg>
+

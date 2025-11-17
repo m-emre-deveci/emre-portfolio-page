@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Scientist Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="canvas">
+      <header class="intro panel">
+        <div class="photo-frame">
+          <img
+            src="assets/profile-placeholder.png"
+            alt="Portrait of the data scientist"
+            loading="lazy"
+          />
+        </div>
+        <div class="intro-copy">
+          <p class="eyebrow">J. Data Scientist</p>
+          <h1>I’m Emre Deveci</h1>
+          <p>
+            I translate ambiguous business questions into measurable experiments,
+            build reliable data products, and uncover insights that drive
+            product growth. Curious by default, structured by habit.
+          </p>
+          <div class="stats">
+            <div>
+              <p class="stat-label">Years</p>
+              <p class="stat-value">2+</p>
+            </div>
+            <div>
+              <p class="stat-label">Models Shipped</p>
+              <p class="stat-value">18</p>
+            </div>
+            <div>
+              <p class="stat-label">Industries</p>
+              <p class="stat-value">4</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="panel projects">
+        <div class="panel-heading">
+          <p class="eyebrow">Featured Work</p>
+          <h2>Projects</h2>
+        </div>
+        <div class="project-carousel" aria-label="Project showcase">
+          <article class="project-card">
+            <div>
+              <p class="project-label">Machine Learning</p>
+              <h3>Customer Churn Radar</h3>
+              <p>
+                Gradient boosted model + interpretable features that lifted
+                retention by 9%.
+              </p>
+            </div>
+            <span>Python · XGBoost · Airflow</span>
+          </article>
+
+          <article class="project-card">
+            <div>
+              <p class="project-label">Experimentation</p>
+              <h3>Pricing Experiment Lab</h3>
+              <p>
+                Sequential testing pipeline that monitors uplift in near real
+                time with guardrails.
+              </p>
+            </div>
+            <span>R · Bayes · Shiny</span>
+          </article>
+
+          <article class="project-card">
+            <div>
+              <p class="project-label">Data Products</p>
+              <h3>Executive Metrics Hub</h3>
+              <p>
+                Mode dashboards & semantic layer enabling self-serve KPIs for
+                leadership.
+              </p>
+            </div>
+            <span>SQL · dbt · Mode</span>
+          </article>
+
+          <article class="project-card">
+            <div>
+              <p class="project-label">NLP</p>
+              <h3>Voice of Customer Insights</h3>
+              <p>
+                Topic clustering + sentiment layering across 2M+ feedback
+                records.
+              </p>
+            </div>
+            <span>Python · spaCy · AWS</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel experience">
+        <div class="panel-heading">
+          <p class="eyebrow">Professional Experience</p>
+          <h2>Experience</h2>
+        </div>
+        <ul class="timeline">
+          <li>
+            <div>
+              <p class="timeline-period">May 2024 — September 2025</p>
+              <h3>Analyst (Working Student) · EWE Trading GmbH</h3>
+              <p>
+                Bremen, Germany — Supporting energy traders with fast analytics,
+                KPI dashboards, and automation that brings clarity to pricing
+                decisions.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p class="timeline-period">December 2021 — July 2022</p>
+              <h3>Business Developer Intern · Everytale</h3>
+              <p>
+                Delaware, USA — Built data-backed outreach campaigns, evaluated
+                partnership opportunities, and tracked funnel performance for a
+                global events platform.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="panel education">
+        <div class="panel-heading">
+          <p class="eyebrow">Academic Roots</p>
+          <h2>Education</h2>
+        </div>
+        <div class="education-grid">
+          <article class="education-card">
+            <p class="timeline-period">2023 — 2025</p>
+            <h3>M.Sc. Data Science for Society &amp; Business</h3>
+            <p>Constructor University · Bremen, Germany</p>
+            <p>
+              Exploring applied ML, causal inference, and human-centered analytics for
+              complex socio-economic systems.
+            </p>
+          </article>
+          <article class="education-card">
+            <p class="timeline-period">2017 — 2023</p>
+            <h3>B.Sc. Physics</h3>
+            <p>Bogazici University · Istanbul, Türkiye</p>
+            <p>
+              Built a rigorous foundation in quantitative modeling, experimentation,
+              and systems thinking.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel contact">
+        <div class="panel-heading">
+          <p class="eyebrow">Say Hello</p>
+          <h2>Contact</h2>
+        </div>
+        <form class="contact-form">
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@email.com" required />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="4" placeholder="Let’s collaborate"></textarea>
+          </label>
+          <button type="submit">Send Message</button>
+        </form>
+        <div class="contact-meta">
+          <p>or email me directly</p>
+          <a href="mailto:m.emre.deveci@email.com">m.emre.deveci@gmail.com</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+
